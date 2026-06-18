@@ -1,5 +1,6 @@
 const header = document.querySelector(".header");
 const hmenu = document.querySelector(".mo_btn");
+const topBtn = document.querySelector(".top_btn");
 
 hmenu.addEventListener("click",function(){
   hmenu.classList.add("open");
@@ -12,6 +13,60 @@ window.addEventListener("scroll", function () {
     header.classList.remove("active");
   }
 });
+
+// top_btn
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        topBtn.style.display = 'block';
+    } else {
+        topBtn.style.display = 'none';
+    }
+});
+topBtn.addEventListener("click", ()=>{
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+});
+
+// main_slide
+
+  var mainSw = new Swiper(".main_slider .main_mask", {
+    speed:1000,
+    rewind:true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".main_slider .main_pagi",
+      type: 'fraction',
+      formatFractionCurrent: function (number) {
+          return ('0' + number).slice(-2);
+      },
+      formatFractionTotal: function (number) {
+          return ('0' + number).slice(-2);
+      },
+      renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' +
+                 '<span class="mid_bar"> / </span>' +
+                 '<span class="' + totalClass + '"></span>';
+      }
+    },
+    navigation: {
+      nextEl: ".main_slider .next",
+      prevEl: ".main_slider .prev",
+    },
+    // on: {
+    //   init:barAni1,
+    //   slideChange: slidereset1
+    // },
+  });
+
 
 const mainConsultSwiper = new Swiper('.main_consult_slide .main_consult_mask', {
     a11y: false,
