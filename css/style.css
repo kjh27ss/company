@@ -86,6 +86,7 @@ section h2{text-align: center;}
 .index_wrap .main_slider{
     position: relative;
     height: 910px;
+    overflow: hidden;
 }
 .index_wrap .main_slider .main_mask{
     width: 100%;
@@ -101,7 +102,10 @@ section h2{text-align: center;}
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: scale(1.2);
+    transition: transform 2s ease-out;
 }
+.index_wrap .main_slider .item.swiper-slide-active picture img{transform: scale(1);}
 .index_wrap .main_slider .item .t_box{
     position: absolute;
     bottom: 200px;
