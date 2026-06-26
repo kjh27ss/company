@@ -1,9 +1,25 @@
 $(function(){
   const header = document.querySelector(".header");
+  const dep2List = document.querySelectorAll(".dep2");
   const hmenu = document.querySelector(".mo_btn");
   const topBtn = document.querySelector(".top_btn");
   const langBtn = document.querySelector(".lang_w");
   const langItem = document.querySelector(".lang_w .list");
+
+  header.addEventListener("mouseenter", function(){
+    header.classList.add("a");
+
+    dep2List.forEach(dep2 => {
+      dep2.style.height = dep2.scrollHeight + "px";
+    });
+  });
+  header.addEventListener("mouseleave", function(){
+    header.classList.remove("a");
+
+    dep2List.forEach(dep2 => {
+      dep2.style.height = "0";
+    });
+  });
 
   langBtn.addEventListener("click", (e) => {
     e.stopPropagation();
