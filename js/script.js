@@ -1,10 +1,28 @@
 $(function(){
   const header = document.querySelector(".header");
-  const dep2List = document.querySelectorAll(".dep2");
+  const dep2List = document.querySelectorAll("#gnb .dep2");
   const hmenu = document.querySelector(".mo_btn");
   const topBtn = document.querySelector(".top_btn");
-  const langBtn = document.querySelector(".lang_w");
-  const langItem = document.querySelector(".lang_w .list");
+  const langBtns = document.querySelectorAll(".lang_w");
+  const langItem = document.querySelectorAll(".lang_w .list");
+  const lstw = document.querySelectorAll(".lst_w > ul > li");
+  const hdpBtn = document.querySelector(".hd_pc_btn");
+  const hdmBtn = document.querySelector(".hd_m_btn");
+  const mMenuw = document.querySelector(".m_menuw");
+
+
+  hdpBtn.addEventListener("click", function(){
+    mMenuw.classList.add("a");
+  });
+  hdmBtn.addEventListener("click", function(){
+    mMenuw.classList.remove("a");
+  });
+
+  lstw.forEach((item) => {
+    item.addEventListener("click", function () {
+      this.classList.toggle("a");
+    });
+  });
 
   header.addEventListener("mouseenter", function(){
     header.classList.add("a");
@@ -21,14 +39,18 @@ $(function(){
     });
   });
 
+  langBtns.forEach((langBtn) => {
   langBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     langBtn.classList.toggle("open");
   });
+});
 
-  document.addEventListener("click", () => {
+document.addEventListener("click", () => {
+  langBtns.forEach((langBtn) => {
     langBtn.classList.remove("open");
   });
+});
 
   window.addEventListener("scroll", function () {
     if(window.scrollY > 50){
