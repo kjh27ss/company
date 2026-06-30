@@ -29,7 +29,7 @@ section h2{text-align: center;}
 .header.active{background: #fff;}
 .header.active .logo .logo_p{display: none;}
 .header.active .logo .logo_m{display: block;}
-.header.active .lang{background-image: url(/img/ico/lang_h.svg);}
+.header.active .lang{background-image: url(img/ico/lang_h.svg);}
 .header.active .menu li > a{color: #111;}
 .header.active .menu li:hover > a{color: #2861FC;}
 .header.active .hd_right .hd_pc_btn span{background: #111;}
@@ -37,7 +37,7 @@ section h2{text-align: center;}
 .header.a{background: #fff;}
 .header.a .logo .logo_p{display: none;}
 .header.a .logo .logo_m{display: block;}
-.header.a .lang{background-image: url(/img/ico/lang_h.svg);}
+.header.a .lang{background-image: url(img/ico/lang_h.svg);}
 .header.a .menu li > a{color: #111;}
 .header.a .menu li:hover > a{color: #2861FC;font-weight: bold;}
 .header.a .menu li:hover .dep2{max-height: 300px;opacity: 1;}
@@ -137,7 +137,7 @@ section h2{text-align: center;}
     width: 10px;
     height: 10px;
     background-color: #fff;
-    background: url(/img/ico/lang_arrow.svg)no-repeat center / contain;
+    background: url(img/ico/lang_arrow.svg)no-repeat center / contain;
 }
 .hd_right .lang_w .list{
     display: none;
@@ -264,7 +264,7 @@ section h2{text-align: center;}
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-image: url(/img/ico/lang_arrow.svg);
+    background-image: url(img/ico/lang_arrow.svg);
     transition: all .3s;
 }
 .m_menuw .m_menu .m_cont .r_box .lst_w > ul > li .dep2{
@@ -382,7 +382,7 @@ section h2{text-align: center;}
     width: calc(50% - 1px);
 }
 .index_wrap .service_sec .service_list .item{
-    background: url(/img/main_service_01.png);
+    background: url(img/main_service_01.png);
     display: block;
     min-height: 600px;
     height: 100%;
@@ -434,7 +434,7 @@ section h2{text-align: center;}
     border: 1px solid #ddd;
     border-radius: 50%;
     background: #fff;
-    background-image: url(/img/ico/arrow.svg);
+    background-image: url(img/ico/arrow.svg);
     background-size: 20px 20px;
     top: 30%;
     background-repeat: no-repeat;
@@ -473,7 +473,7 @@ section h2{text-align: center;}
     background-color: #fff;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(/img/ico/top_btn.svg);
+    background-image: url(img/ico/top_btn.svg);
 }
 
 /* footer */
