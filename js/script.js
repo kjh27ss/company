@@ -171,11 +171,13 @@ document.addEventListener("click", () => {
     });
 
   // map
+  kakao.maps.load(function () {
+
   var container = document.getElementById('map');
 
   var options = {
-      center: new kakao.maps.LatLng(37.5665, 126.9780),
-      level: 3
+    center: new kakao.maps.LatLng(37.5665, 126.9780),
+    level: 3
   };
 
   var map = new kakao.maps.Map(container, options);
@@ -183,8 +185,10 @@ document.addEventListener("click", () => {
   var markerPosition = new kakao.maps.LatLng(37.5665, 126.9780);
 
   var marker = new kakao.maps.Marker({
-      position: markerPosition
+    position: markerPosition
   });
 
   marker.setMap(map);
+
+});
 })
