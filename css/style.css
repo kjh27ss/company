@@ -454,7 +454,7 @@ section h2{text-align: center;}
 .index_wrap .consult_sec .main_consult_slide .progress_bar .swiper-pagination-progressbar-fill{background-color: #2861FC;}
 
 .index_wrap .location{background: rgba(248, 249, 254,0.8);}
-.index_wrap .location h2{margin-bottom: 60px;}
+.index_wrap .location h2{margin-bottom: 60px;padding-top: 60px;}
 #map{
     width: 100%;
     height: 500px;
@@ -621,7 +621,7 @@ section h2{text-align: center;}
     .index_wrap .consult_sec .main_consult_slide .item .txt{margin-top: 15px;}
     .index_wrap .consult_sec .main_consult_slide .item .txt .desc{font-size: 14px;}
     .index_wrap .consult_sec .main_consult_slide .progress_bar{width: 100%;margin-top: 30px;}
-    .index_wrap .location h2{margin-bottom: 30px;}
+    .index_wrap .location h2{margin-bottom: 30px;padding-top: 30px;}
     .footer{padding-top: 35px;}
     .footer .f_logo{width: 60px;}
     .footer .f_cont{padding: 0 20px;}

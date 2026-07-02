@@ -15,7 +15,7 @@ $(function(){
     mMenuw.classList.add("a");
   });
   hdmBtn.addEventListener("click", function(){
-    mMenuw.classList.add("a");
+    mMenuw.classList.remove("a");
   });
 
   lstw.forEach((item) => {
