@@ -9,7 +9,31 @@ $(function(){
   const hdpBtn = document.querySelector(".hd_pc_btn");
   const hdmBtn = document.querySelector(".hd_m_btn");
   const mMenuw = document.querySelector(".m_menuw");
+  const popup = document.querySelector(".popup");
+  const popupClose = document.querySelector(".p_close_btn");
+  const tdCloseBtn = document.querySelector(".td_close");
 
+  // 팝업
+  popupClose.addEventListener("click", function(){
+    popup.classList.add("a");
+  });
+
+  const hide = localStorage.getItem("hidePopupUntil");
+
+  if (hide && Date.now() < Number(hide)) {
+    popup.style.display = "none";
+  }
+
+  // 오늘 하루 보지 않기
+  tdCloseBtn.addEventListener("click", () => {
+     console.log(tdCloseBtn);
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      tomorrow.setHours(0, 0, 0, 0);
+
+      localStorage.setItem("hidePopupUntil", tomorrow.getTime());
+      popup.style.display = "none";
+  });
 
   hdpBtn.addEventListener("click", function(){
     mMenuw.classList.add("a");

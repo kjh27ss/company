@@ -6,7 +6,7 @@ section h2{text-align: center;}
     width: 100%;
     height:115px;
     position:fixed;
-    z-index: 100;
+    z-index: 98;
     top: 0;
     left: 0;
     transition: background 0.3s;
@@ -21,9 +21,6 @@ section h2{text-align: center;}
     height: 1px;
     background: rgba(255, 255, 255, 0.2);
 }
-/*.header .logo{color: #fff;
-    height: 30px;
-}*/
 .header .logo .logo_m{display: none;}
 
 .header.active{background: #fff;}
@@ -196,7 +193,7 @@ section h2{text-align: center;}
 }
 .m_menuw .m_menu .m_t{
     position: absolute;
-    z-index: 2;
+    z-index: 100;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -535,6 +532,94 @@ section h2{text-align: center;}
     color: #fff;
 }
 
+/* 팝업 */
+.popup_outer{
+    position: absolute;
+    width: 400px;
+    height:auto;
+    max-width: 100%;
+    top: 100px;
+    left: 20px;
+    z-index: 99;
+}
+.popup{
+    background: rgb(255,255,255,0.9);
+    border-radius: 5px;
+    max-height: 90vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.popup.a{display: none;}
+.popup .inner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.popup .inner .top{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.popup .inner .top .p_close_btn{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.popup .inner .top .p_close_btn span{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    height: 2px;
+    background: #000000;
+}
+.popup .inner .top .p_close_btn span:nth-of-type(1){
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.popup .inner .top .p_close_btn span:nth-of-type(2){
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.popup .inner .cont .txt ~ .txt{
+    margin-top: 10px;
+}
+.popup .inner .bottom{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.popup .inner .bottom .git_btn{
+    background: rgba(0, 51, 106, 0.8);
+    color: #fff;
+    padding: 3px 8px;
+    width: 55px;
+    border-radius: 5px;
+    font-size: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popup .inner .bottom .git_btn:after{
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: block;
+    background: url(../img/ico/main_next.png)no-repeat center / contain;
+    transition: transform .3s ease;
+}
+.popup .inner .bottom .git_btn:hover:after{
+    transform: translateX(3px);
+}
+
+.popup .inner .bottom .td_chk:hover{text-decoration-line: underline;}
+
 /* 반응형 */
 @media screen and (max-width:1840px){
   .header .h_inner{
@@ -632,6 +717,16 @@ section h2{text-align: center;}
 }
 
 @media screen and (max-width:620px){
+  .popup_outer{
+    width: 100%;
+    height:auto;
+    top: 10px;
+    left: 0;
+  }
+  .popup{
+    width: 95%;
+    margin: 0 auto;
+  }
   .banner .banner_wrap .txt{bottom: 50px;}
   .header .menu,.header .lang{display: none;}
   .mo_btn{
