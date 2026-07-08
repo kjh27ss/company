@@ -618,7 +618,7 @@ section h2{text-align: center;}
     transform: translateX(3px);
 }
 
-.popup .inner .bottom .td_chk:hover{text-decoration-line: underline;}
+.popup .inner .bottom .td_close:hover{text-decoration-line: underline;}
 
 /* 반응형 */
 @media screen and (max-width:1840px){
